@@ -39,7 +39,7 @@ var App = {
      //console.log(contractInstance.getHashAt.call());
      return contractInstance.getBalance.call();
    }).then(function(res){
-     console.log(res['c'][0]);
+     App.println(res['c'][0]);
      console.log(App.contracts.SimpleWallet.address);
    });
    /*web3.eth.getAccounts(function(error,accounts){
@@ -48,6 +48,38 @@ var App = {
      }
      var account = accounts[0];
    });*/
+ },
+
+ checkContractBalance: function(){
+   App.contracts.SimpleWallet.deployed().then(function(instance) {
+     contractInstance = instance;
+     //console.log(contractInstance.getHashAt.call());
+     return contractInstance.coolShit.call();
+   }).then(function(res){
+     App.println(res['c'][0]);
+   });
+ },
+
+ tryWithdrawl: function(){
+   web3.eth.getAccounts(function(error,accounts){
+     if (error) {
+       console.log(error);
+     }
+     var account = accounts[0];
+     App.contracts.SimpleWallet.deployed().then(function(instance) {
+       contractInstance = instance;
+       return contractInstance.refund({from: account});
+     }).then(function(res){
+       App.println(res);
+     }).then(function(err){
+       console.log(err);
+     });
+   });
+ },
+
+ println: function(val){
+   $(".consoleOutput").append(val + "<br>");
+
  }
 
 };
@@ -55,6 +87,15 @@ var App = {
 $(".but").click(function(){
   App.getVal();
 });
+
+$(".otherBut").click(function(){
+  App.checkContractBalance();
+});
+
+$(".withdrawl").click(function(){
+  App.tryWithdrawl();
+});
+
 
 $(function() {
   $(window).load(function() {

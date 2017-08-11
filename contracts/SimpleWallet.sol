@@ -7,5 +7,15 @@ pragma solidity ^0.4.4;
 // token, see: https://github.com/ConsenSys/Tokens. Cheers!
 
 contract SimpleWallet {
+	function () payable{
 
+	}
+
+	function getBalance() returns (uint){
+		return this.balance;
+	}
+
+	function coolShit() returns (uint){
+		return 5;
+	}
 }

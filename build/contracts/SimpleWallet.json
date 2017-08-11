@@ -1,15 +1,58 @@
 {
   "contract_name": "SimpleWallet",
-  "abi": [],
-  "unlinked_binary": "0x60606040523415600e57600080fd5b5b603680601c6000396000f30060606040525b600080fd00a165627a7a72305820f08f62eabea8ffddc1765a3cccb070f0233ca39655a0eca5fa13aa528257aaea0029",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "coolShit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60e08061001e6000396000f3006060604052361560465763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166312065fe08114604e578063e4010a8d146070575b604c5b5b565b005b3415605857600080fd5b605e6092565b60405190815260200160405180910390f35b3415607a57600080fd5b605e60ae565b60405190815260200160405180910390f35b73ffffffffffffffffffffffffffffffffffffffff3016315b90565b60055b905600a165627a7a7230582049fa76e070ac7025ee5e72e7b2b6f047b93148621d0fffad920807a3f1caee7c0029",
   "networks": {
     "1502331431639": {
       "events": {},
       "links": {},
-      "address": "0x07980155b7e5c83702ff757a3d30ef478b80b03a",
-      "updated_at": 1502331692458
+      "address": "0xc6ceeeb8026929f20ce8398914dd47fcd8894f79",
+      "updated_at": 1502332810551
+    },
+    "1502466945971": {
+      "events": {},
+      "links": {},
+      "address": "0x1f9e4dd619f7ca1e6c558ea069b296c797048dbc",
+      "updated_at": 1502466960683
+    },
+    "1502467117577": {
+      "events": {},
+      "links": {},
+      "address": "0x7d8163de8a3e9c03673c7f29b7a4d2392dbbd0be",
+      "updated_at": 1502467343400
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1502331692458
+  "updated_at": 1502467343400
 }
